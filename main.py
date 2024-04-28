@@ -11,7 +11,6 @@ from __init__ import app, db, cors  # Definitions initialization
 
 # setup APIs
 from api.user import user_api # Blueprint import api definition
-from api.player import player_api
 from api.memeforge import meme_forge_api
 
 # database migrations
@@ -27,7 +26,6 @@ db.init_app(app)
 
 # register URIs
 app.register_blueprint(user_api) # register api routes
-app.register_blueprint(player_api)
 app.register_blueprint(meme_forge_api)
 app.register_blueprint(app_projects) # register app pages
 
